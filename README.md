@@ -1,6 +1,8 @@
 # aws
 <br/>
-## EC2 = Iaas
+
+## EC2 (Iaas)
+
 * *(cria uma máquina pura apenas com Sistema Operacional)*
 
 * 1) Criar a conta na AWS https://console.aws.amazon.com
