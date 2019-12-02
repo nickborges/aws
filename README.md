@@ -24,39 +24,39 @@
 	* `sudo service tomcat8 start
 
 * Liberar o firewall(acesso externo), copiar o Public DNS:
-	*	ec2-52-87-238-210.compute-1.amazonaws.com
+	* `ec2-52-87-238-210.compute-1.amazonaws.com`
 
 * Testar o Tomcat, no navegador colocar o DNS:
-	*	ec2-52-87-238-210.compute-1.amazonaws.com
+	* `ec2-52-87-238-210.compute-1.amazonaws.com`
 
 * Instalar o Mysql server:
-	*	sudo apt-get mysql-server
+	* `sudo apt-get mysql-server`
 
 * Conectar no Mysql:
-	* mysql
-	* create database nomedabase;
-	* show databases;
+	* `mysql`
+	* `create database nomedabase;`
+	* `show databases;`
 
 * Alterar a senha do root no Mysql:
-	* FLUSH PRIVILEGES;
-	* ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';
+	* `FLUSH PRIVILEGES;`
+	* `ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';`
 
 * Deploy da aplicação:
 	* copiar o arquivo da app para dentro da máquina:
-		sudo scp -i springbootdemo.pem loja.war ubuntu@ec2-52-87-238-210.compute-1.amazonaws.com:~
+		* `sudo scp -i springbootdemo.pem loja.war ubuntu@ec2-52-87-238-210.compute-1.amazonaws.com:~`
 	* conectar na máquina:
-		sudo ssh -i springbootdemo.pem ubuntu@ec2-52-87-238-210.compute-1.amazonaws.com
+		* `sudo ssh -i springbootdemo.pem ubuntu@ec2-52-87-238-210.compute-1.amazonaws.com`
 	* copiar o arquivo loja.war pra dentro do Tomcat:
-		sudo mv loja.war /var/lib/tomcat8/webapps/
+		* `sudo mv loja.war /var/lib/tomcat8/webapps/`
 	* varificar o log do Tomcat:
-		sudo cat /var/lib/tomcat8/logs/localhost.2019-12-01.log
+		* `sudo cat /var/lib/tomcat8/logs/localhost.2019-12-01.log`
 	* setar a senha do mysql no tomcat, criando uma variável de ambiente:
-		cd /usr/share/tomcat8/bin
-		sudo nano setenv.sh
-			export senha=1234
+		* `cd /usr/share/tomcat8/bin`
+		* `sudo nano setenv.sh`
+		* `export senha=1234`
 	* reiniciar o Tomcat
-		sudo service tomcat8 stop
-		sudo service tomcat8 start
+		* `sudo service tomcat8 stop`
+		* `sudo service tomcat8 start
 
 ## Escalabilidade vertical
 * Isso significa melhorar o CPU, HD ou a memória RAM
