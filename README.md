@@ -12,16 +12,16 @@
 * Criar a primeira instância EC2 -> Launch Instance -> Ubuntu Server
 
 * Acessar a máquina e criar a chave SSH (selecionar a instância e clicar em "Connect")
-	*	sudo ssh -i springbootdemo.pem ubuntu@ec2-52-87-238-210.compute-1.amazonaws.com
+	* `sudo ssh -i springbootdemo.pem ubuntu@ec2-52-87-238-210.compute-1.amazonaws.com`
 
 * Instalar a JRE: 
-	*	sudo apt-get update && apt-get install openjdk-8-jre
+	* `sudo apt-get update && apt-get install openjdk-8-jre`
 
 * Instalar o Tomcat:
-	*	sudo apt-get install tomcat8
+	* `sudo apt-get install tomcat8`
 
 * Iniciar o Tomcat:
-	*	sudo service tomcat8 start
+	* `sudo service tomcat8 start
 
 * Liberar o firewall(acesso externo), copiar o Public DNS:
 	*	ec2-52-87-238-210.compute-1.amazonaws.com
